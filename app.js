@@ -44,7 +44,7 @@ app.use(function(err,req,res,next){
 })
 
 // Server listener 
-app.listen(PORT, function(err,done){
+app.listen(PORT || 3000, function(err,done){
     if(err){
         console.log('Error while listening to server', err);
     }
