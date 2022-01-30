@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
-const PORT = 9090;
+const PORT = process.env.PORT || 9090;
 require('./db._init');
 
 
@@ -44,7 +44,7 @@ app.use(function(err,req,res,next){
 })
 
 // Server listener 
-app.listen(PORT || 3000, function(err,done){
+app.listen(PORT , function(err,done){
     if(err){
         console.log('Error while listening to server', err);
     }
