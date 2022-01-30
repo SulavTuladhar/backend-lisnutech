@@ -3,7 +3,7 @@ const dbConfig = require('./configs/db.config');
 const mongoose = require('mongoose');
 
 // Mongoose URL = mongodb://localhost:27017/db_name
-mongoose.connect(dbConfig.conxnURL + '/' + dbConfig.dbName, {
+mongoose.connect(dbConfig.conxnURL , {
     useUnifiedTopology: true,
     useNewUrlParser: true
 }, function(err,done){

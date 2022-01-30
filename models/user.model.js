@@ -40,11 +40,13 @@ const UserSchema = new mongoose.Schema({
         enum:['admin', 'user']
     },
     image: String
-}, {
+},{
+    timestamps: true
+},{
     writeConcern: {
-       w: 'majority',
-       j: true,
-       wtimeout: 1000
+        w: 'majority',
+        j: true,
+        wtimeout: 1000
     }
 }
 )
